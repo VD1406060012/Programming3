@@ -2,18 +2,18 @@ var matrix = [];
 var n = 70;
 var m = 70;
 var side = 8;
-var xot_tokos = 65;
-var xotaker_tokos = 10;
-var gishatich_tokos = 10;
-var mard_tokos = 10;
-var sev_xoroch_tokos = 1;
+var Grass_tokos = 65;
+var Xotaker_tokos = 10;
+var Gishatich_tokos = 10;
+var Mard_tokos = 10;
+var Sev_xoroch_tokos = 1;
 for (var y = 0; y < n; y++) {
     matrix[y] = [];
     for (var x = 0; x < m; x++) {
         matrix[y][x] = 0;
     }
 }
-for (var i = 0; i < n * m / 100 * xot_tokos; i++) {
+for (var i = 0; i < n * m / 100 * Grass_tokos; i++) {
     var x = Math.floor(Math.random() * m);
     var y = Math.floor(Math.random() * n);
     while (matrix[y][x] != 0) {
@@ -22,7 +22,7 @@ for (var i = 0; i < n * m / 100 * xot_tokos; i++) {
     }
     matrix[y][x] = 1;
 }
-for (var i = 0; i < n * m / 100 * xotaker_tokos; i++) {
+for (var i = 0; i < n * m / 100 * Xotaker_tokos; i++) {
     var x = Math.floor(Math.random() * m);
     var y = Math.floor(Math.random() * n);
     while (matrix[y][x] != 0) {
@@ -31,7 +31,7 @@ for (var i = 0; i < n * m / 100 * xotaker_tokos; i++) {
     }
     matrix[y][x] = 2;
 }
-for (var i = 0; i < n * m / 100 * gishatich_tokos; i++) {
+for (var i = 0; i < n * m / 100 * Gishatich_tokos; i++) {
     var x = Math.floor(Math.random() * m);
     var y = Math.floor(Math.random() * n);
     while (matrix[y][x] != 0) {
@@ -40,7 +40,7 @@ for (var i = 0; i < n * m / 100 * gishatich_tokos; i++) {
     }
     matrix[y][x] = 3;
 }
-for (var i = 0; i < n * m / 100 * mard_tokos; i++) {
+for (var i = 0; i < n * m / 100 * Mard_tokos; i++) {
     var x = Math.floor(Math.random() * m);
     var y = Math.floor(Math.random() * n);
     while (matrix[y][x] != 0) {
@@ -49,7 +49,7 @@ for (var i = 0; i < n * m / 100 * mard_tokos; i++) {
     }
     matrix[y][x] = 4;
 }
-for (var i = 0; i < n * m / 100 * sev_xoroch_tokos / 4; i++) {
+for (var i = 0; i < n * m / 100 * Sev_xoroch_tokos / 4; i++) {
     var x = Math.floor(Math.random() * (m - 1));
     var y = Math.floor(Math.random() * (n - 1));
     while (x < 0 || y < 0 || x >= n || y >= m || (matrix[y][x] != 0 && matrix[y + 1][x] != 0 && matrix[y][x + 1] != 0 && matrix[y + 1][x + 1] != 0)) {
